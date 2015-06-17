@@ -19,11 +19,11 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-//		try {
-//			initilizeMap();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			initilizeMap();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -45,18 +45,18 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-//	private void initilizeMap(){
-//		if (googleMap == null){
-//			googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-//			if (googleMap == null){
-//				Toast.makeText(getApplicationContext(), "Jodido.. no esta el maps !!!", Toast.LENGTH_SHORT).show();
-//			}
-//		}
-//	}
+	private void initilizeMap(){
+		if (googleMap == null){
+			googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+			if (googleMap == null){
+				Toast.makeText(getApplicationContext(), "Jodido.. no esta el maps !!!", Toast.LENGTH_SHORT).show();
+			}
+		}
+	}
 	
-//	@Override
-//	protected void onResume(){
-//		super.onResume();
-//		initilizeMap();
-//	}
+	@Override
+	protected void onResume(){
+		super.onResume();
+		initilizeMap();
+	}
 }
